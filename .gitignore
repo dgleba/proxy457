@@ -1,0 +1,22 @@
+#
+vol/nginx/
+certs/
+
+docker-compose.yml
+
+.DS_Store
+node_modules
+# start.sh
+
+
+local.ini
+# docker.ini
+
+.env
+.env.*
+.env.local
+
+/x/
+backup/
+certs/
+copyof/
