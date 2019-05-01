@@ -1,6 +1,15 @@
 #
-vol/nginx/
+
+#vol/nginx/
+
+.env
+.env.*
+.env.local
+
+/x/
+backup/
 certs/
+copyof/
 
 docker-compose.yml
 
@@ -11,12 +20,3 @@ node_modules
 
 local.ini
 # docker.ini
-
-.env
-.env.*
-.env.local
-
-/x/
-backup/
-certs/
-copyof/
