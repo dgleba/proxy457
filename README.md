@@ -4,6 +4,8 @@
 
 # Status
 
+Seafile works. 2019-05-01_Wed_16.09-PM
+
 .
 
 # Notes.
