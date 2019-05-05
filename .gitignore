@@ -16,6 +16,7 @@ local.ini
 .env.*
 .env.local
 
+x/
 /x/
 backup/
 certs/
