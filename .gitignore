@@ -11,7 +11,7 @@ backup/
 certs/
 copyof/
 
-docker-compose.yml
+# docker-compose.yml
 
 .DS_Store
 node_modules
@@ -20,3 +20,13 @@ node_modules
 
 local.ini
 # docker.ini
+
+.env
+.env.*
+.env.local
+
+x/
+/x/
+backup/
+certs/
+copyof/
