@@ -12,22 +12,22 @@ networks:
 
 services:
   web:
-    # http://web456-208-168-7-24.nip.io/
-    # https://web456-208-168-7-24.nip.io/
-    image: nginx:1.15-alpine
-    # container_name: example-webapp
-    volumes:
-      - ./nindex.html:/usr/share/nginx/html/index.html
-    expose:
-      - "80"
-    environment:
-      - VIRTUAL_HOST=web-104-193-61-58.nip.io
-      - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=web-104-193-61-58.nip.io
-      - LETSENCRYPT_EMAIL=d@gmail.com
-    restart: always
-    networks:
-      - sister
+  # http://web456-208-168-7-24.nip.io/
+  # https://web456-208-168-7-24.nip.io/
+  # image: nginx:1.15-alpine
+  # # container_name: example-webapp
+  # volumes:
+  #   - ./nindex.html:/usr/share/nginx/html/index.html
+  # expose:
+  #   - "80"
+  # environment:
+  #   - VIRTUAL_HOST=web-104-193-61-58.nip.io
+  #   - VIRTUAL_PORT=80
+  #   - LETSENCRYPT_HOST=web-104-193-61-58.nip.io
+  #   - LETSENCRYPT_EMAIL=d@gmail.com
+  # restart: always
+  # networks:
+  #   - sister
 
   jw-nginx-proxy:
     image: jwilder/nginx-proxy:alpine
