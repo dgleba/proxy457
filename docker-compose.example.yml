@@ -11,7 +11,7 @@ networks:
       external:true
 
 services:
-  web:
+  # web:
   # http://web456-208-168-7-24.nip.io/
   # https://web456-208-168-7-24.nip.io/
   # image: nginx:1.15-alpine

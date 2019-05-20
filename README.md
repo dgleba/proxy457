@@ -23,6 +23,10 @@ remove data and start over..
 
 ---
 
+docker-compose exec nginx-proxy cat /etc/nginx/conf.d/default.conf >generated.conf
+
+---
+
 # More.
 
 .
