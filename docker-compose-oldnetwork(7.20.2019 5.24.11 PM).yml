@@ -8,7 +8,7 @@ version: "3.6"
 networks:
   sister:
     name: sister
-#      external:true # this being indented from 'name: sister' just added external: true to the name sister.
+      external:true
 
 services:
   #
