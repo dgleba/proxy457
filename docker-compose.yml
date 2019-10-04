@@ -8,6 +8,10 @@ version: "3.6"
 networks:
   sister:
     name: sister
+  pydio475net:
+    name: pydio475net
+  # pydionet:
+  # pydio475net:
 #      external:true # this being indented from 'name: sister' just added external: true to the name sister.
 
 services:
@@ -46,6 +50,8 @@ services:
     restart: always
     networks:
       - sister
+      # - pydionet
+      - pydio475net
     logging:
       driver: "json-file"
       options:
@@ -64,6 +70,8 @@ services:
     restart: always
     networks:
       - sister
+      # - pydionet
+      - pydio475net
     # links will share the volumes between containers.
     links:
       - nginx-proxy
