@@ -8,7 +8,7 @@ Seafile works. 2019-05-01_Wed_16.09-PM
 
 .
 
-# Notes.
+# Notes
 
 sudo chmod 777 /srv/dkr/proxy457/vol/
 sudo chmod 777 /srv/dkr/proxy457/vol/vost.d
@@ -27,9 +27,23 @@ docker-compose exec nginx-proxy cat /etc/nginx/conf.d/default.conf >generated.co
 
 ---
 
-# More.
+# To copy files from the container.
 
-.
+I wanted to get a copy of some files from the running container so I had them locally.
+
+```
+To work around.. error... invalid symlink "/srv/dkr/x/proxy457_nginx-proxy_1__files/nginx/modules" -> "../../usr/lib/nginx/modules"
+#
+tmpdir=/srv/dkr/x
+out=/srv/dkr/x/proxy457_nginx-proxy_1__files3
+src=proxy457_nginx-proxy_1:/etc/nginx/
+tmptar=32019-10-13tmp.tar
+#
+mkdir -p $tmpdir ; cd $tmpdir
+mkdir -p $out
+docker cp -L $src  - > $tmptar ; cd $out ; tar -xvf ../$tmptar
+
+```
 
 ---
 

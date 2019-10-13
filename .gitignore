@@ -6,6 +6,8 @@
 .env.*
 .env.local
 
+vol/nginx/conf.d/default.conf
+
 /x/
 backup/
 certs/
@@ -21,12 +23,4 @@ node_modules
 local.ini
 # docker.ini
 
-.env
-.env.*
-.env.local
 
-x/
-/x/
-backup/
-certs/
-copyof/
