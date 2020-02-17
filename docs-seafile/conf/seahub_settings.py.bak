@@ -13,4 +13,4 @@ DATABASES = {
 }
 
 
-FILE_SERVER_ROOT = "http://sf.dg.jgleba.com/seafhttp"
+FILE_SERVER_ROOT = "http://sf-108-168-7-24.nip.io/seafhttp"
