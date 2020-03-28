@@ -14,6 +14,7 @@ networks:
   # pydio475net:
 #      external:true # this being indented from 'name: sister' just added external: true to the name sister.
 
+
 services:
   #
   # web:
@@ -57,7 +58,7 @@ services:
       driver: "json-file"
       options:
         max-size: "100k"
-        max-file: "99"
+        max-file: "15"
 
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion:v1.9
@@ -76,6 +77,11 @@ services:
     # links will share the volumes between containers.
     links:
       - nginx-proxy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "15"
 
   seafile:
     # see custom config ./vol/nginx/vhost.d/sf-108-168-7-24.nip.io
@@ -101,3 +107,8 @@ services:
       - LETSENCRYPT_EMAIL=d@gmail.com
     networks:
       - sister
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "15"
