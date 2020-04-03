@@ -29,7 +29,7 @@ services:
   # networks:
   #   - sister
 
-  jw-nginx-proxy:
+  jproxy:
     image: jwilder/nginx-proxy:alpine
     ports:
       - "80:80"
@@ -45,10 +45,8 @@ services:
     networks:
       - sister
 
-  letsencrypt:
+  lets:
     image: jrcs/letsencrypt-nginx-proxy-companion:v1.9
-    depends_on:
-      - jw-nginx-proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./vol/vhost.d:/etc/nginx/vhost.d
@@ -57,6 +55,8 @@ services:
     restart: always
     networks:
       - sister
+    depends_on:
+      - jproxy
     # links will share the volumes between containers.
     links:
-      - jw-nginx-proxy
+      - jproxy

@@ -86,7 +86,7 @@ services:
 
   seafile:
     # see custom config ./vol/nginx/vhost.d/sf-108-168-7-24.nip.io
-    image: seafileltd/seafile:6.2.5
+    image: seafileltd/seafile:6.3.4
     restart: unless-stopped
     env_file:
       - .env
