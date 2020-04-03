@@ -36,7 +36,8 @@ services:
   #   networks:
   #     - sister
 
-  nginx-proxy:
+  jproxy:
+  # docker-compose pull nproxy to update...
     image: jwilder/nginx-proxy:alpine
     ports:
       - "80:80"
@@ -60,10 +61,8 @@ services:
         max-size: "100k"
         max-file: "15"
 
-  letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion:v1.9
-    depends_on:
-      - nginx-proxy
+  lets:
+    image: jrcs/letsencrypt-nginx-proxy-companion:v1.12.1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./vol/nginx/vhost.d:/etc/nginx/vhost.d
@@ -74,9 +73,11 @@ services:
       - sister
       # - pydionet
       # -w pydio475net
+    depends_on:
+      - jproxy
     # links will share the volumes between containers.
     links:
-      - nginx-proxy
+      - jproxy
     logging:
       driver: "json-file"
       options:
