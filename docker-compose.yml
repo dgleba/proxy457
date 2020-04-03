@@ -59,7 +59,7 @@ services:
       driver: "json-file"
       options:
         max-size: "100k"
-        max-file: "15"
+        max-file: "5"
 
   lets:
     image: jrcs/letsencrypt-nginx-proxy-companion:v1.12.1
@@ -82,11 +82,11 @@ services:
       driver: "json-file"
       options:
         max-size: "100k"
-        max-file: "15"
+        max-file: "5"
 
   seafile:
     # see custom config ./vol/nginx/vhost.d/sf-108-168-7-24.nip.io
-    image: seafileltd/seafile:6.3.4
+    image: seafileltd/seafile:6.2.5
     restart: unless-stopped
     env_file:
       - .env
@@ -105,11 +105,38 @@ services:
       # - LETSENCRYPT_HOST=sf-216-110-224-238.nip.io
       - VIRTUAL_HOST=sf.dg.jgleba.com
       - LETSENCRYPT_HOST=sf.dg.jgleba.com
-      - LETSENCRYPT_EMAIL=d@gmail.com
+      - LETSENCRYPT_EMAIL=dgleba@gmail.com
     networks:
       - sister
     logging:
       driver: "json-file"
       options:
         max-size: "100k"
-        max-file: "15"
+        max-file: "5"
+
+  seafile2:
+    # see custom config ./vol/nginx/vhost.d/sf-108-168-7-24.nip.io
+    image: seafileltd/seafile:6.2.5
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ../datasys/seafiledata2:/shared
+    ports:
+      - "6312:80"
+    expose:
+      - "80"
+      - "8000"
+      - "8082"
+    environment:
+      - VIRTUAL_HOST=sf2.dg.jgleba.com
+      - LETSENCRYPT_HOST=sf2.dg.jgleba.com
+      - LETSENCRYPT_EMAIL=dgleba@gmail.com
+    networks:
+      - sister
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+
