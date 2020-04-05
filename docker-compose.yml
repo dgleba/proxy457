@@ -14,7 +14,7 @@ networks:
   #   name: pydio475net
   # pydionet:
   # pydio475net:
-#      external:true # this being indented from 'name: sister' just added external: true to the name sister.
+  #      external:true # this being indented from 'name: sister' just added external: true to the name sister.
 
 
 services:
@@ -126,22 +126,19 @@ services:
     # see custom config ./vol/nginx/vhost.d/sf-108-168-7-24.nip.io
     image: seafileltd/seafile:6.2.5
     restart: unless-stopped
-    env_file:
-      - .env.sf2
-    volumes:
-      - ../datasys/seafiledata2:/shared
     ports:
       - "6312:80"
     expose:
       - "80"
       - "8000"
       - "8082"
+    env_file:
+      - .env.sf2
     environment:
-      - VIRTUAL_HOST=sf2.dg.jgleba.com
-      - LETSENCRYPT_HOST=sf2.dg.jgleba.com
-      - LETSENCRYPT_EMAIL=dgleba@gmail.com
       - VIRTUAL_NETWORK=sister
       - VIRTUAL_PORT=80    
+    volumes:
+      - ../datasys/seafiledata2:/shared
     networks:
       - sister
     logging:
@@ -162,6 +159,9 @@ services:
       #  - "443:443"  # If https is enabled, cancel the comment.
     env_file:
       - .env.sf3
+    environment:
+      - VIRTUAL_NETWORK=sister
+      - VIRTUAL_PORT=80
     volumes:
       - ../datasys/seafile3/sdata:/shared   
       - ./wait-for-it.sh:/a/wait-for-it.sh   
@@ -174,12 +174,6 @@ services:
     networks:
       - sister
       # - seafile-net
-    environment:
-      - VIRTUAL_HOST=sf3.dg.jgleba.com
-      - LETSENCRYPT_HOST=sf3.dg.jgleba.com
-      - LETSENCRYPT_EMAIL=dgleba@gmail.com
-      - VIRTUAL_NETWORK=sister
-      - VIRTUAL_PORT=80
     logging:
       driver: "json-file"
       options:
@@ -194,13 +188,13 @@ services:
     ports:
       - "14181:3306"
     #     - "443:443"  # If https is enabled, cancel the comment.
+    env_file:
+      - .env.sf3
     volumes:
       - ../datasys/seafile3/mariadb:/var/lib/mysql  
     networks:
       - sister
       # - seafile-net
-    env_file:
-      - .env.sf3
     logging:
       driver: "json-file"
       options:
