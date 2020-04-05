@@ -8,6 +8,8 @@
 
 vol/nginx/conf.d/default.conf
 
+archive/
+
 /x/
 backup/
 certs/

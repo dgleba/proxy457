@@ -15,7 +15,7 @@ location ^~ /.well-known/acme-challenge/ {
 
   location /seafhttp {
       rewrite ^/seafhttp(.*)$ $1 break;
-      proxy_pass http://seafile3:8082;
+      proxy_pass http://seafile2:8082;
       # client_max_body_size 0;
       client_max_body_size 10000m;
       proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;

@@ -46,10 +46,12 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./vol/nginx/vhost.d:/etc/nginx/vhost.d
-      - ./vol/nginx/conf.d:/etc/nginx/conf.d/
       - ./vol/nginx/certs:/etc/nginx/certs:ro
       - ./vol/nginx/html:/usr/share/nginx/html
+      - ./vol/nginx/vhost.d:/etc/nginx/vhost.d:ro
+      # - ./vol/nginx/conf.d:/etc/nginx/conf.d/
+      - ./vol/nginx/conf.d/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
+
     labels:
       com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
     restart: always
