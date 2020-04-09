@@ -63,7 +63,15 @@ docker-compose exec jproxy cat /etc/nginx/conf.d/default.conf >archive/generated
 
 ```
 
+## Copy files out of container for viewing 
 
+If you want to view files in your favorite editor, copy them to the host for viewing.
+```
+src=proxy457_jproxy_1:/etc/nginx
+out=/srv/dkr/ztmp/jproxynginx1
+mkdir -p $out
+docker cp $src $out
+```
 
 
 # This is..
@@ -77,3 +85,4 @@ https://github.com/dgleba/proxy457
 https://github.com/jwilder/nginx-proxy
 
 https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
+
