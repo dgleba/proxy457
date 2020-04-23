@@ -9,8 +9,10 @@
 vol/nginx/conf.d/default.conf
 
 archive/
+docs-exclude/
 
 /x/
+/ztmp/
 backup/
 certs/
 copyof/

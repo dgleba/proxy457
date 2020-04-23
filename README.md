@@ -29,7 +29,7 @@ docker-compose exec nginx-proxy cat /etc/nginx/conf.d/default.conf >generated.co
 
 # To copy files from the container.
 
-I wanted to get a copy of some files from the running container so I had them locally.
+I wanted to get a copy of some files from the running container so I had them locally for viewing.
 
 ```
 To work around.. error... invalid symlink "/srv/dkr/x/proxy457_nginx-proxy_1__files/nginx/modules" -> "../../usr/lib/nginx/modules"
@@ -68,7 +68,7 @@ docker-compose exec jproxy cat /etc/nginx/conf.d/default.conf >archive/generated
 If you want to view files in your favorite editor, copy them to the host for viewing.
 ```
 src=proxy457_jproxy_1:/etc/nginx
-out=/srv/dkr/ztmp/jproxynginx1
+out=../zout/jproxynginx1
 mkdir -p $out
 docker cp $src $out
 ```
