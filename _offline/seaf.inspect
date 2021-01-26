@@ -1,0 +1,262 @@
+[
+    {
+        "Id": "d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb",
+        "Created": "2020-04-08T00:32:20.183209064Z",
+        "Path": "/sbin/my_init",
+        "Args": [
+            "--",
+            "/scripts/start.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 12409,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2020-07-08T23:56:31.798044345Z",
+            "FinishedAt": "2020-07-08T23:56:30.614023318Z"
+        },
+        "Image": "sha256:7e8327257e5471279a180e25eb655750dbfe832dc34f3eaba64c5fa5e7fc476a",
+        "ResolvConfPath": "/var/lib/docker/containers/d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb/hostname",
+        "HostsPath": "/var/lib/docker/containers/d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb/hosts",
+        "LogPath": "/var/lib/docker/containers/d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb/d6f33c59d76133f9b85e73afe6248b323791b0d07d958a8b1639c3e698d452cb-json.log",
+        "Name": "/proxy457_seafile2_1",
+        "RestartCount": 9,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/srv/dkr/datasys/seafiledata2:/shared:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "5",
+                    "max-size": "100k"
+                }
+            },
+            "NetworkMode": "sister",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6312"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e6adbb01c9160b1b2d1f979f105b557cd7cdade564e8c402d2a66d522dad6fb3-init/diff:/var/lib/docker/overlay2/a286fb55fa33b52ef6d95b535ce35d3637954da41a83bda069ef17ecbd90301a/diff:/var/lib/docker/overlay2/2683caaa0ce60613593be4252b2c63edeaa6e9a6f3aee1e39ff459d01f8badb6/diff:/var/lib/docker/overlay2/68b812aecd9c874c8be1a110c1834cccb907202851011bfdff9e276dc69496c9/diff:/var/lib/docker/overlay2/d874d309647129c57b398d9627f30a573723400de5400e3e81f16e17973dc47c/diff:/var/lib/docker/overlay2/440e195e8834cecd5bdee26318aef9c37ab48fece80146b3d9ce4e376f05eaba/diff:/var/lib/docker/overlay2/601c388c954212dd43c5c77ab221829fb855628d7386fed6954e29f43621520d/diff:/var/lib/docker/overlay2/42b2439d567314bc1776e61d3f42996ceeaa8b23f973c994549afecdc695b6a4/diff:/var/lib/docker/overlay2/fb5581163fc930156fcd542481951c84f06cea64e831576ea9dacfa868ab7d8a/diff:/var/lib/docker/overlay2/91790c245690880d67eee7614831761aeae3f8e02976df8070340392efc9f68e/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e6adbb01c9160b1b2d1f979f105b557cd7cdade564e8c402d2a66d522dad6fb3/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e6adbb01c9160b1b2d1f979f105b557cd7cdade564e8c402d2a66d522dad6fb3/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e6adbb01c9160b1b2d1f979f105b557cd7cdade564e8c402d2a66d522dad6fb3/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/srv/dkr/datasys/seafiledata2",
+                "Destination": "/shared",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "d6f33c59d761",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {},
+                "8000/tcp": {},
+                "8082/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SEAFILE_SERVER_HOSTNAME=sf2.dg.jgleba.com",
+                "SEAFILE_ADMIN_EMAIL=dgleba@gmail.com",
+                "SEAFILE_ADMIN_PASSWORD=goldbook45",
+                "VIRTUAL_HOST=sf2.dg.jgleba.com",
+                "LETSENCRYPT_HOST=sf2.dg.jgleba.com",
+                "LETSENCRYPT_EMAIL=dgleba@gmail.com",
+                "VIRTUAL_NETWORK=sister",
+                "VIRTUAL_PORT=80",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "UPDATED_AT=20180412",
+                "SEAFILE_VERSION=6.2.5",
+                "SEAFILE_SERVER=seafile-server"
+            ],
+            "Cmd": [
+                "/sbin/my_init",
+                "--",
+                "/scripts/start.py"
+            ],
+            "ArgsEscaped": true,
+            "Image": "seafileltd/seafile:6.2.5",
+            "Volumes": {
+                "/shared": {}
+            },
+            "WorkingDir": "/opt/seafile",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "61a1068dcaa50a331d053046064f76f6a8327b6f3a38d13265e5fd471dd48c6f",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "proxy457",
+                "com.docker.compose.service": "seafile2",
+                "com.docker.compose.version": "1.21.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "68ef59962a17ef37a092b7687ef690108efe75c1ab067f86142c3560eabf132b",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "6312"
+                    }
+                ],
+                "8000/tcp": null,
+                "8082/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/68ef59962a17",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "sister": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "d6f33c59d761",
+                        "seafile2"
+                    ],
+                    "NetworkID": "a1e7ff0894d8f9853d05337b008f2e415ffc497772c8da276bc39db533a6e9ca",
+                    "EndpointID": "36322531bc6ba93b43d57b29607d026bb2087d34fd1b1be46ba04f81a99b5de7",
+                    "Gateway": "192.168.16.1",
+                    "IPAddress": "192.168.16.14",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:c0:a8:10:0e",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

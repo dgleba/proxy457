@@ -26,7 +26,7 @@ remove data and start over..
 get jwilder generated config..
 
 
-docker-compose exec nginx-proxy cat /etc/nginx/conf.d/default.conf >generated.nginx.$(date +"%Y.%m.%d_%H.%M.%S").conf
+docker-compose exec jproxy cat /etc/nginx/conf.d/default.conf >generated.nginx.$(date +"%Y.%m.%d_%H.%M.%S").conf
 
 
 
@@ -40,9 +40,9 @@ I wanted to get a copy of some files from the running container so I had them lo
 To work around.. error... invalid symlink "/srv/dkr/x/proxy457_nginx-proxy_1__files/nginx/modules" -> "../../usr/lib/nginx/modules"
 #
 tmpdir=/srv/dkr/x
-out=/srv/dkr/x/proxy457_nginx-proxy_1__files3
-src=proxy457_nginx-proxy_1:/etc/nginx/
-tmptar=32019-10-13tmp.tar
+out=/srv/dkr/x/proxy457_jproxy_1__files4
+src=proxy457_jproxy_1:/etc/nginx/
+tmptar=32019-10-14tmp.tar
 #
 mkdir -p $tmpdir ; cd $tmpdir
 mkdir -p $out

@@ -2,6 +2,9 @@
 
 #vol/nginx/
 
+
+generated.nginx.*.conf
+
 .env
 .env.*
 .env.local
