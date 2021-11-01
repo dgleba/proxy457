@@ -51,6 +51,10 @@ services:
       - ./vol/nginx/vhost.d:/etc/nginx/vhost.d:ro
       # - ./vol/nginx/conf.d:/etc/nginx/conf.d/
       - ./vol/nginx/conf.d/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
+      # I added to the bottom of the template and commented it.
+      - ./nginx2.tmpl:/app/nginx.tmpl
+      # Now lines can be added to the bottom of the generated config from files from here..
+      - ./vol/nginx/jwilder-nginx-override:/etc/nginx/jwilder-nginx-override
     labels:
       com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
     restart: always
